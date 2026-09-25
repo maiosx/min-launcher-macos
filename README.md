@@ -38,6 +38,10 @@ python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 python3 main.py
 ```
+If installation of PyQt6 or other dependency's fail for some reason run the following command
+```bash
+pip3 install PyQt6 pyobjc-framework-Cocoa pynput
+```
 
 A small icon appears in the menu bar. Click it (or press **Option+Space**) to
 open the fullscreen launcher. Type to filter, **↑/↓** or **Tab** to move the
