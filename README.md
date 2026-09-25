@@ -33,7 +33,7 @@ reimplements it as a standalone **PyQt6** application that:
 ## Install & run
 
 ```bash
-cd min-launcher-macos
+cd min-launcher-macos-main
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 python3 main.py
