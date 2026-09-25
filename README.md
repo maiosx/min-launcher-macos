@@ -72,7 +72,7 @@ entry (so it never shows a Dock icon, no PyObjC workaround needed) build it
 with [`py2app`](https://py2app.readthedocs.io/):
 
 ```bash
-pip install py2app
+pip3 install py2app
 py2applet --make-setup main.py
 python3 setup.py py2app
 ```
