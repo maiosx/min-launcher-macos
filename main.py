@@ -29,7 +29,7 @@ import webbrowser
 from pathlib import Path
 
 from PyQt6.QtCore import Qt, QObject, pyqtSignal, QTimer
-from PyQt6.QtGui import QIcon, QPixmap, QKeyEvent, QFont
+from PyQt6.QtGui import QIcon, QPixmap, QKeyEvent, QFont, QPainter
 from PyQt6.QtWidgets import (
     QApplication, QWidget, QVBoxLayout, QHBoxLayout, QGridLayout,
     QLabel, QLineEdit, QScrollArea, QPushButton, QDialog, QFormLayout,
@@ -621,8 +621,19 @@ def main():
     bridge.triggered.connect(window.toggle)
     listener = start_global_hotkey(bridge)
 
+    def _make_tray_icon():
+        pix = QPixmap(22, 22)
+        pix.fill(Qt.GlobalColor.transparent)
+        painter = QPainter(pix)
+        painter.setRenderHint(QPainter.RenderHint.Antialiasing)
+        painter.setBrush(Qt.GlobalColor.white)
+        painter.setPen(Qt.PenStyle.NoPen)
+        painter.drawRoundedRect(2, 2, 18, 18, 5, 5)
+        painter.end()
+        return QIcon(pix)
+
     tray = QSystemTrayIcon()
-    tray.setIcon(QIcon.fromTheme("application-x-executable"))
+    tray.setIcon(_make_tray_icon())
     menu = QMenu()
     toggle_action = menu.addAction("Show Min Launcher")
     toggle_action.triggered.connect(window.toggle)
