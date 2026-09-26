@@ -39,7 +39,7 @@ python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 python3 main.py
 ```
-If installation of PyQt6 or other dependency's fail for some reason run the following command
+If installation of PyQt6 or other dependencies fail for some reason run the following command
 ```bash
 pip3 install PyQt6 pyobjc-framework-Cocoa pynput
 ```
