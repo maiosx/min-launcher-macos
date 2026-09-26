@@ -1,4 +1,5 @@
 # Min Launcher — macOS port
+<img width="2560" height="1440" alt="Preview" src="Preview.png" />
 
 A fullscreen, keyboard-driven app launcher for macOS (tested against macOS 26
 "Tahoe"), ported from the original [min-launcher](https://github.com/maiosx/min-launcher)
