@@ -30,10 +30,10 @@ reimplements it as a standalone **PyQt6** application that:
 - Toggles via a menu-bar icon and a global hotkey (`pynput`) instead of a
   Hyprland keybind + `omarchy-shell shell toggle`.
 
-## Install & run
+## Install & run (replace XXXXX with your username)
 
 ```bash
-cd min-launcher-macos-main
+cd /Users/XXXXX/Downloads/min-launcher-macos-main
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 python3 main.py
